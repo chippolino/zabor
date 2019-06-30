@@ -1,0 +1,45 @@
+.item-article
+  margin-bottom: 40px
+  padding-left: 30px
+  position: relative
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    width: 4px
+    height: 100%
+    left: 0
+    top: 0
+    background-color: #e4ece2
+  
+  &:after
+    height: 24px
+    background-color: $color-green
+
+  &:last-of-type
+    margin-bottom: 0
+
+  &__title
+    font-size: 18px
+    font-weight: bold
+    color: $color-gray
+    margin-bottom: 10px
+
+  &__text
+    color: $color-gray
+    font-size: 14px
+    line-height: 24px
+    margin-bottom: 15px
+    
+    p
+      margin: 0
+
+  &__link
+    color: $color-green
+    font-size: 14px
+    line-height: 24px
+    transition: all 250ms ease
+
+    &:hover
+      color: #fac233

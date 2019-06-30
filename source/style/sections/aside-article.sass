@@ -1,0 +1,156 @@
+.aside-article
+
+  @include laptop
+    margin-top: 68px
+
+  &__title
+    font-size: 18px
+    color: $color-gray
+    padding-right: 47px
+    display: inline-block
+    position: relative
+    margin-bottom: 31px
+
+    img
+      position: absolute
+      right: 0
+      top: 13px
+
+  &-blocks
+    display: flex
+    flex-wrap: wrap
+
+  &-block
+    flex: 0 0 100%
+    max-width: 100%
+    border: 1px solid #e4ece2
+    border-radius: 4px
+    background-color: $white
+    margin-bottom: 32px
+    position: relative
+    transition: all 250ms ease
+
+    @include laptop
+      flex: 0 0 48%
+      max-width: 48%
+
+      margin-right: 15px
+
+      &:last-of-type
+        margin-right: 0
+
+    @include tablet
+      flex: 0 0 100%
+      max-width: 100%
+      
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      right: 0
+      bottom: 0
+      border-style: solid
+      border-width: 0 0 61px 98px
+      border-color: transparent transparent white transparent
+      bottom: -1px
+      right: -1px
+      transition: all 250ms ease
+
+    &:after
+      content: ''
+      position: absolute
+      width: 115px
+      height: 1px
+      background-color: #e4ece2
+      bottom: 29px
+      right: -9px
+      transform: rotate(-32deg)
+      transition: all 250ms ease
+
+    &:hover
+      background-color: #eff6ed
+      
+      &:after
+        background-color: $color-green
+
+      &:before
+        border-color: transparent transparent $color-green transparent
+
+      .aside-article-block__title
+
+        &:before
+          background-color: rgba(#71AD5F, 0.8)
+
+    &__arrow
+      width: 32px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      background-image: linear-gradient(to right, #f1a818 0%, #fcc737 100%)
+      box-shadow: 0 1px 0 #cb8f19
+      border-radius: 50%
+      position: absolute
+      bottom: 15px
+      right: 30px
+      transition: all 250ms eaase
+      opacity: 0
+      z-index: 3
+
+      img
+        display: block
+        max-width: 100%
+        height: auto
+        width: 11px
+        margin: 0 auto
+
+    &__title
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      padding: 43px 37px
+      position: relative
+      font-size: 18px
+      font-weight: bold
+
+      &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(#505050, 0.5)
+        transition: all 250ms ease
+
+      span
+        position: relative
+        z-index: 2
+
+    &__content
+      padding-top: 33px
+      padding-left: 29px
+      padding-right: 29px
+
+    &__text
+      font-size: 12px
+      line-height: 20px
+      color: $color-gray-light
+      margin-bottom: 21px
+
+    &__link
+      display: block
+      position: relative
+      color: $color-gray
+      font-size: 14px
+      padding-top: 23px
+      padding-bottom: 31px
+      overflow: hidden
+      transition: all 250ms ease
+
+      &:hover
+
+        ~ .aside-article-block__arrow
+          opacity: 1

@@ -1,0 +1,27 @@
+section.recommend
+
+  .container
+
+    .title.recommend__title-top Рекомендуемые товары
+
+    .recommend__row
+
+      - var obj = ['Деревянный забор', 'Кирпичный забор', 'Еврозабор', 'Забор из бетонных панелей']
+
+      each item in obj
+
+        .recommend__col
+
+          .recommend__item
+
+            .recommend__img
+              img(src="assets/img/article/aside-img.jpg", alt=`${item}` class="img-responsive")
+
+            .recommend__block
+              
+              .recommend__title!= item
+
+              .recommend__text 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
+
+              a(href="#").btn.btn--green.btn--small.recommend__btn Читать подробнее

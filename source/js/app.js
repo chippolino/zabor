@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
   popupImg();
   photoSlider();
   initSimplebar();
+  articeSlider();
 });
 
 function initSimplebar() {
-  if (document.documentElement.offsetWidth < 768) {
+  if (document.documentElement.offsetWidth < 768 && document.getElementById('myElement')) {
     var dd = new SimpleBar(document.getElementById('myElement'), { autoHide: false });
   }
 }
@@ -144,7 +145,7 @@ function sliderReviews(item) {
       el: '.reviews__pag',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<span class="swiper-pagination-bullet reviews__pag-item" style="background-image: url(${mass[index]})"></span>`;
+        return '<span class="swiper-pagination-bullet reviews__pag-item" style="background-image: url(' + mass[index] + ')"></span>';
       },
     },
     navigation: {
@@ -152,4 +153,43 @@ function sliderReviews(item) {
       prevEl: '.reviews-button-prev',
     },
   });
+}
+
+function articeSlider() {
+
+  var slider = document.querySelector('.js-article-slider');
+
+  if (slider) {
+    var galleryThumbs = new Swiper('.js-article-thumbs', {
+      spaceBetween: 15,
+      slidesPerView: 4,
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+      loop: true,
+      loopedSlides: 4,
+      breakpoints: {
+        992: {
+          slidesPerView: 3
+        },
+        767: {
+          slidesPerView: 2
+        }
+      }
+    });
+    var galleryTop = new Swiper('.js-article-slider', {
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 4,
+      navigation: {
+        nextEl: '.article__control-btn_next',
+        prevEl: '.article__control-btn_prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+  }
+
 }

@@ -1,0 +1,23 @@
+section.constructor
+
+  .container
+
+    .title.constructor__title Соберите забор самостоятельно и расссчитайте стоимость онлайн
+
+    .constructor__items
+
+      - var n = 1
+
+      while n < 3
+
+        .constructor__col
+
+          a(href="#").constructor__item
+
+            .constructor__triangle
+
+            .constructor__img
+              img(src=`assets/img/constructor/icon-${n++}.png`, alt=`icon`)
+            span.constructor__text Перейти в конструктор заборов
+            span.constructor__arrow
+              img(src="assets/img/products/arrow-products.svg", alt="arrow")
