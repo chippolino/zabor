@@ -1,0 +1,234 @@
+.calculate
+  padding-top: 91px
+  padding-bottom: 94px
+  position: relative
+  background-color: $color-light
+
+  @include laptop
+    padding-bottom: 67px
+
+  @include tablet
+    padding-bottom: 55px
+
+  &__triangle
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    top: 0
+    left: 0
+    border-width: 155px 245px 0 0
+    border-color: $white transparent transparent transparent
+
+    @include laptop
+      display: none
+
+  &__title
+    margin-bottom: 65px
+    position: relative
+    z-index: 2
+
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    position: relative
+
+    @include desktop
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+
+  &__block
+    max-width: 50%
+    flex: 0 0 50%
+
+    @include desktop
+      max-width: 100%
+      flex: 0 0 100%
+
+  &__img
+    position: relative
+    padding-bottom: 32px
+    padding-top: 16px
+    max-width: 520px
+    margin: 0 auto 64px
+
+    @include phones
+      padding-top: 60px
+      padding-bottom: 55px
+
+  &__form
+    max-width: 41.6%
+    flex: 0 0 41.6%
+
+    @include desktop
+      max-width: 100%
+      flex: 0 0 100%
+      width: 100%
+      padding-bottom: 100px
+
+    @include tablet
+      padding-bottom: 180px
+
+  &__form-calc
+    border: 2px solid #e4ece2
+    background-color: $white
+    padding-left: 40px
+    padding-right: 28px
+    padding-top: 39px
+    padding-bottom: 22px
+    width: 100%
+    max-width: 100%
+
+    @include desktop
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    @include tablet
+      padding-left: 15px
+      padding-right: 15px
+    
+  &__subtitle
+    text-align: center
+    font-size: 14px
+    color: $color-gray-light
+    font-style: italic
+    line-height: 18px
+    margin-bottom: 20px
+
+  &__house
+    display: block
+    margin: 0 auto
+    height: auto
+    max-width: 100%
+
+  &__input-text
+    position: absolute
+    border: 2px solid $white
+    border-radius: 3px
+    background-color: $white
+    text-align: center
+    width: 165px
+    padding-top: 17px
+    padding-bottom: 16px
+    font-weight: 800
+    font-size: 24px
+    text-transform: uppercase
+    outline: none
+    box-shadow: 0px 0px 0px 1px #e4ece2
+    transition: 250ms all
+    color: $color-gray
+
+    @include tablet
+      padding-top: 9px
+      padding-bottom: 8px
+      width: 136px
+
+    &:focus
+      border: 2px solid #fac233
+
+    &--top
+      top: 0
+      left: 0
+
+    &--left
+      bottom: 0
+      left: 0
+
+    &--right
+      top: 0
+      right: 0
+
+    &--bottom
+      bottom: 0
+      right: 0
+
+  &__btns
+    display: flex
+    justify-content: space-between
+
+    @include desktop
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+
+      .btn
+        max-width: 342px
+        width: 100%
+
+    @include tablet
+      flex-direction: column
+      align-items: center
+
+      .btn
+        white-space: nowrap
+
+        &:first-of-type
+          margin-bottom: 20px
+
+  &__label
+    text-transform: uppercase
+    color: $color-gray
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 26px
+    display: block
+
+    @include desktop
+      max-width: 48%
+      flex: 0 0 48%
+
+    @include tablet
+      max-width: 100%
+      flex: 0 0 100%
+
+    &-span
+      display: flex
+      align-items: center
+      margin-bottom: 12px
+      min-height: 20px
+
+      img
+        margin-right: 14px
+
+  &__cost
+    padding-top: 28px
+    padding-bottom: 27px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+
+    @include desktop
+      margin: 0 auto
+
+    @include tablet
+      flex-direction: column
+      align-items: flex-start
+
+  &__cost-text
+    display: flex
+    align-items: center
+    font-size: 14px
+    color: #71b05e
+    font-weight: 400
+
+    @include desktop
+      margin-right: 35px
+
+    img
+      margin-right: 17px
+
+  &__cost-sum
+    font-weight: 800
+    color: $color-gray
+    font-size: 48px
+    line-height: 1
+
+    span
+      font-size: 24px
+      text-transform: uppercase

@@ -1,0 +1,219 @@
+.header
+  background-color: $bg-light
+  padding-top: 25px
+  padding-bottom: 23px
+
+  @include tablet
+    padding-top: 16px
+    padding-bottom: 14px
+
+  &__wrap
+    display: flex
+    align-items: center
+
+    @include desktop
+      justify-content: space-between
+
+  &__logo
+    flex: 0 0 16.6%
+    max-width: 16.6%
+
+    @include desktop
+      flex: 0 0 auto
+      max-width: none
+      margin-right: 34px
+
+      @include phones
+        margin-right: 10px
+
+    img
+      display: block
+      width: 115px
+      height: auto
+    
+  &__menu-mob
+    max-width: 64px
+    width: 100%
+    height: 64px
+    border: 1px solid $color-gray
+    border-radius: 6px
+    align-items: center
+    justify-content: center
+    margin-right: auto
+    display: none
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 3px
+      background-color: #fac233
+      bottom: 0
+      transition: all 250ms
+
+    @include laptop
+      display: flex
+
+    @include tablet
+      max-width: 32px
+      height: 32px
+      border-color: $color-gray
+
+    @include phones
+      order: 1
+      margin-right: 0
+      margin-left: auto
+
+    span
+      margin-top: -16px
+      position: relative
+      display: block
+      width: 32px
+      height: 3px
+      background-color: $color-gray
+      transition: all 250ms
+      backface-visibility: hidden
+      pointer-events: none
+
+      @include tablet
+        width: 18px
+        height: 2px
+        margin-top: -12px
+
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        width: 32px
+        height: 3px
+        background-color: $color-gray
+        transition: all 250ms
+        backface-visibility: hidden
+        left: 0
+        top: 8px
+
+        @include tablet
+          width: 18px
+          height: 2px
+          background-color: $color-gray
+          top: 6px
+
+      &:after
+        top: 16px
+
+        @include tablet
+          top: 12px
+
+    &.active
+      border-color: $color-yellow
+
+      &:before
+        width: 64px
+
+      span
+        background-color: $color-yellow
+
+        &:after,
+        &:before
+          background-color: $color-yellow
+
+  &__items
+    display: flex
+    align-items: center
+    flex: 0 0 41.6%
+    max-width: 41.6%
+
+    @include desktop
+      flex-direction: column
+      align-items: flex-start
+      flex: 0 0 auto
+      max-width: none
+      margin: 0 auto
+
+    @include tablet
+      display: none
+
+  &__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    text-decoration: none
+    transition: all 250ms
+    
+    &:hover
+      opacity: 0.8
+
+    &:first-of-type
+      margin-right: 43px
+
+      @include desktop
+        margin-right: 0
+        margin-bottom: 10px
+
+  &__icon
+      margin-right: 15px
+
+      img
+        display: block
+
+  &__text
+    font-size: 14px
+    font-weight: 600
+    color: $color-gray
+    margin: 0
+
+  &__phone-block
+    flex: 0 0 41.6%
+    max-width: 41.6%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @include desktop  
+      flex: 0 0 auto
+      max-width: none
+
+    @include laptop
+      flex-direction: column
+      align-items: flex-end
+
+    @include phones
+      margin: 0 auto
+
+
+  &__phone
+    display: flex
+    align-items: center
+
+    @include desktop
+      margin-right: 20px
+
+    @include laptop
+      margin-right: 0
+      margin-bottom: 7px
+
+    img
+      display: block
+      margin-right: 11px
+
+      @include phones
+        display: none
+
+    a
+      text-decoration: none
+      color: $color-gray
+      font-weight: 700
+      font-size: 24px
+      transition: all 250ms
+      white-space: nowrap
+
+      @include phones
+        font-size: 16px
+
+      &:hover
+        opacity: 0.8
+
+  &__btn
+
+    @include tablet
+      display: none

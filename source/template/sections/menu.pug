@@ -1,0 +1,34 @@
+.menu.js-menu
+
+  .container
+
+    -
+      var items = ['О компании', 'Наша продукция', 'Доставка и установка', 'Прайс', 'Наши работы', 'Полезные статьи', 'КОНТАКТЫ']
+
+      var itemsSecond = ['Забор из профнастила', 'Забор из профнастила', 'Забор из профнастила', 'Забор из профнастила', 'Забор из профнастила', 'Забор из профнастила']
+
+    nav
+      ul.menu__items
+
+        each item, idx in items
+
+          if idx == 1
+
+            li.menu__item.menu__item--arrow
+              a(href="")!= item
+
+              ul.menu__submenu
+
+                each itemS in itemsSecond
+
+                  li.menu__submenu-item
+                    a(href="#")!= itemS
+
+          else
+            li.menu__item
+
+              a(href="#")!= item
+
+      .menu__close.js-close
+        span Закрыть
+        img(src="assets/img/close-menu.svg", alt="#")

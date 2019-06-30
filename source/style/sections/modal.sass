@@ -1,0 +1,56 @@
+.modal
+  position: relative
+  max-width: 556px
+  width: 100%
+  margin: 0 auto
+  border: 2px solid #e4ece2
+  border-radius: 6px
+  box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.1)
+  background-color: $white
+  padding-top: 64px
+  padding-bottom: 61px
+
+  @include tablet
+    padding-top: 30px
+    padding-bottom: 30px
+    padding-left: 15px
+    padding-right: 15px
+
+  &__img
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+  &__close
+    position: absolute
+    top: 20px
+    right: 23px
+    width: 24px
+    height: 24px
+    padding: 0
+
+    img
+      pointer-events: none
+
+    &:active
+      top: 20px
+
+    @include phones
+      top: 10px
+      right: 10px
+
+      &:active
+        top: 10px
+
+  &__subtitle
+    font-size: 14px
+    color: #7d817b
+    font-weight: normal
+    text-align: center
+    margin-bottom: 50px
+
+    @include tablet
+      margin-bottom: 20px

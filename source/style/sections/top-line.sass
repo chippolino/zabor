@@ -1,0 +1,37 @@
+.top-line
+  background-color: $bg-gray
+  padding: 9px 0
+
+  @include tablet
+    padding: 0
+    background: linear-gradient(to bottom, $color-green 50%, $color-gray 50%)
+
+  p
+    margin: 0
+    font-size: 12px
+    line-height: 1
+
+  &__block
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @include tablet
+      flex-direction: column
+
+  &__text
+    font-size: 12px
+
+    @include tablet
+      padding: 9px 0
+
+  &__mode
+    display: flex
+    align-items: center
+
+    @include tablet
+      padding: 9px 0
+
+    img
+      display: block
+      margin-right: 11px

@@ -1,0 +1,83 @@
+@import '_mixins/_mixin'
+@import 'common/reset'
+@import 'common/ui'
+@import 'common/button'
+@import 'common/help'
+@import 'common/selectric'
+@import 'fonts'
+@import 'sections/swiper-button'
+
+*
+  box-sizing: border-box
+
+html
+  font-size: 100%
+
+body
+  margin: 0
+  background: $white
+  line-height: 1.5
+  color: $white
+  padding: 0
+  font-family: 'Open Sans', sans-serif
+
+  &.popup
+    overflow: hidden
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 15px
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button
+  opacity: 0
+  margin: 0
+  appearance: none
+  -moz-appearance: textfield
+
+input[type='number']
+  -moz-appearance: textfield
+
+@import 'sections/header'
+@import 'sections/top-line'
+@import 'sections/menu'
+@import 'sections/main-slider'
+@import 'sections/main-icon'
+@import 'sections/products'
+@import 'sections/work'
+@import 'sections/materials'
+@import 'sections/calculate'
+@import 'sections/about'
+@import 'sections/calling'
+@import 'items/item-calling'
+@import 'sections/request'
+@import 'sections/form'
+@import 'sections/footer'
+@import 'sections/modal'
+@import 'sections/form-modal'
+@import 'sections/work-about'
+@import 'sections/info-block'
+@import 'sections/certificate'
+@import 'sections/reviews'
+@import 'sections/article'
+
+
+
+
+.index-main
+  display: flex
+  flex-wrap: wrap
+  margin-left: 20px
+  margin-top: 20px
+
+  a
+    flex: 0 0 100%
+    font-size: 24px
+    text-decoration: none
+    color: $color-green

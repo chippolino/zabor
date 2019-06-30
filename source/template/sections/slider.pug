@@ -1,0 +1,63 @@
+.main-slider
+
+  .swiper-container.js-slider
+
+    .swiper-wrapper
+
+      .swiper-slide.main-slider__block(style="background-image: url(assets/img/slider/bg.jpg)")
+        .container
+          .main-slider__title УСТАНОВИМ ЛЮБОЙ ЗАБОР
+          .main-slider__subtitle <span>ПОД КЛЮЧ</span> ЗА 1 ДЕНЬ!
+          .main-slider__btn-wrap
+            a(href="#" class="btn btn--yellow btn--small")
+              img(src="assets/img/main/calc-btn.svg", alt="#")
+              span Онлайн калькулятор
+
+            a(href="#" class="btn btn--green btn--small")
+              img(src="assets/img/main/const-btn.svg", alt="#")
+              span Конструктор заборов
+
+      .swiper-slide.main-slider__block(style="background-image: url(assets/img/slider/bg.jpg)")
+        .container
+          .main-slider__title Сделаем что нибудь
+          .main-slider__subtitle <span>ПОД КЛЮЧ</span> ЗА 1 ДЕНЬ!
+
+  .main-slider__arrow
+    .container
+      .swiper-button-next.slider__arrow-next
+      .swiper-button-prev.slider__arrow-prev
+
+  .main-icon
+    
+    .container
+
+      .main-icon__wrap
+
+        -
+          var items = [
+            {
+              title: 'БЕСПЛАТНЫЙ ВЫЕЗД ЗАМЕРЩИКА!',
+              text: 'Наш замерщик приедет к вам бесплатно.<br>Быстрый выезд в течении 1 дня!'
+            },
+            {
+              title: 'БЕСПЛАТНЫЙ РАСЧЕТ СМЕТЫ!',
+              text: 'Рассчитаем подробную смету бесплатно:<br>материалы, расходники, работы, цены!'
+            },
+            {
+              title: 'БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ 24/7',
+              text: 'Проконсультируем бесплатно! Сориентируем по стоимости и срокам работ по телефону!'
+            }
+          ]
+
+        each item, idx in items
+          .main-icon__block
+
+            .main-icon__img
+              img(src=`assets/img/main/main-icon-${idx+1}.svg`, alt="#")
+
+            .main-icon__desc
+
+              .main-icon__title!= item.title
+
+              .main-icon__text!= item.text
+        

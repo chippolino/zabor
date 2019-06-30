@@ -1,0 +1,169 @@
+.menu
+  background-color: $color-green
+
+  @include laptop
+    background-color: transparent
+    position: absolute
+    top: 123px
+    left: 130px
+    z-index: 100
+    display: none
+  
+  @include tablet
+    top: 78px
+    left: 0
+
+  &__items
+    margin: 0 35px 0 31px
+    list-style: none
+    padding: 0
+    display: flex
+    justify-content: space-between
+
+    @include desktop
+      margin: 0 -15px
+
+    @include laptop
+      flex-direction: column
+      display: inline-flex
+      background-color: #71ad5f
+
+  &__item
+    position: relative
+    padding-top: 25px
+    padding-bottom: 23px
+    padding-left: 12px
+    padding-right: 12px
+    transition: all 250ms
+
+    @include laptop
+      border-bottom: 1px solid #6FC256
+      padding-top: 12px
+      padding-bottom: 11px
+
+      &:last-of-type
+        border-bottom: none
+
+    &:hover
+      background-color: $color-yellow
+
+      > .menu__submenu
+        transform: rotateX(0)
+        visibility: visible
+        opacity: 1
+
+    &--arrow
+      position: relative
+      padding-right: 36px
+
+      &:after
+        content: ''
+        position: absolute
+        width: 14px
+        height: 14px
+        background-color: $white
+        background-image: url(../img/arrow-down.svg)
+        background-repeat: no-repeat
+        background-position: center 6px
+        border-radius: 50%
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+        top: 32px
+        right: 12px
+
+        @include laptop
+          transform: rotate(-90deg)
+          top: 19px
+
+    a
+      text-decoration: none
+      font-size: 14px
+      text-transform: uppercase
+      color: $white
+      font-weight: 500
+      letter-spacing: 0.28px
+
+  &__submenu
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    z-index: 10
+    transform-origin: 0 0
+    transform-style: preserve-3d
+    transform: rotateX(-90deg)
+    transition: 300ms ease
+    list-style: none
+    min-width: 284px
+    background-color: $white
+    border: 1px solid $color-green
+    padding: 0
+    padding-top: 18px
+    padding-bottom: 20px
+
+    @include laptop
+      left: 100%
+      top: 0
+      padding-top: 0
+      padding-bottom: 0
+
+    @include phones
+      left: 30%
+
+  &__submenu-item
+    position: relative
+    padding: 8px 0 12px 56px
+    transition: all 250ms
+
+    @include laptop
+      padding-top: 7px
+      padding-bottom: 7px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 18px
+      height: 18px
+      left: 23px
+      top: 10px
+      border-radius: 3px
+      background-color: $color-green
+      background-image: url(../img/arrow.svg)
+      background-repeat: no-repeat
+      background-position: center center
+
+    &:hover
+      background-color: $color-yellow
+
+    a
+      color: $color-gray
+      text-transform: none
+      font-size: 14px
+      font-weight: 400
+
+  &__close
+    margin: 0 -15px
+    display: none
+    justify-content: space-between
+    align-items: center
+    background-color: $color-light
+    color: $color-gray
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+    width: 202px
+    padding-top: 12px
+    padding-bottom: 11px
+    padding-right: 12px
+    padding-left: 12px
+
+    @include laptop
+      display: inline-flex
+
+  nav
+    
+    @include laptop
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+
+  &-container
+    position: relative

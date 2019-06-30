@@ -1,0 +1,41 @@
+section.request.sect-top(style="background-image: url(assets/img/request/bg-request.jpg)")
+
+  .container
+
+    .title.request__title быстрая заявка
+
+    .request__subtitle Отвечаем за&nbsp;10&nbsp;минут!
+
+    form
+      .form__row
+        .form__col
+
+          label.form__label
+            input(type="text" class="form__input" placeholder="Введите имя")
+            span.form__span Ваше имя
+
+        .form__col
+
+          label.form__label
+            input(type="text" class="form__input js-phone" placeholder="+7 (XXX) XXX-XX-XX" required)
+            span.form__span Номер телефона*
+        
+        .form__col
+
+          label.form__label
+            textarea(placeholder="Комментарий ( не обязательно )" class="form__textarea")
+            span.form__span комментарий
+
+        .form__col
+
+          label.form__label
+            input(type="submit" value="Оформить заявку" class="btn btn--yellow form__btn")
+            img(src="assets/img/request/btn.svg", alt="#" class="form__img-btn")
+
+      .form__row.form__row--jcc
+
+        .form__col.form__col--tac
+
+          label.form__checkbox-container Ознакомлен и согласен с <a href="#" target="_blank">политикой конфиденциальности</a>
+            input(type="checkbox" checked class="form__checkbox")
+            span.form__checkmark

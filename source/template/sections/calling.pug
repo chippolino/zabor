@@ -1,0 +1,55 @@
+section.calling.sect-top
+
+  .calling__triangle.calling__triangle--top
+
+  .calling__triangle.calling__triangle--bot
+
+  .container
+
+    .title.calling__title Вызовите технолога-замерщика<br>бесплатно до заключения договора
+
+    .calling__items
+
+      -
+        var items = [
+          {
+            icon: 'icon-1.svg',
+            title: '2 дня',
+            text: 'От звонка до готового<br>забора!'
+          },
+          {
+            icon: 'icon-2.svg',
+            title: '5 часов',
+            text: 'В среднем занимает установка забора'
+          },
+          {
+            icon: 'icon-3.svg',
+            title: '1 час',
+            text: 'времени на замер и детальный расчет стоимости'
+          }
+        ]
+    
+      each item in items
+
+        .item-calling__col
+          .calling__item.item-calling
+
+            .item-calling__triangle
+
+            .item-calling__img
+              img(src=`assets/img/calling/${item.icon}`, alt="#")
+
+            .item-calling__block
+
+              .item-calling__title!= item.title
+
+              .item-calling__text!= item.text
+
+
+    .calling__phone
+      .calling__phone-text
+        | Телефон для заявок <a href="tel:+7000000000">+7 000 00-00-00</a> или оформите быструю заявку прямо на сайте
+
+      .calling__phone-arrow
+      .calling__phone-arrowcut
+      .calling__phone-arrow-last

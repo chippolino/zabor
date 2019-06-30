@@ -1,0 +1,25 @@
+section.products.sect-top
+
+  .container
+
+    .title.products__title наша продукция
+
+    .products__items
+
+      -
+        var items = ['Сетчатые ограждения', 'ОГРАЖДЕНИЯ ИЗ&nbsp;ПРОФНАСТИЛА', 'Ограждения из&nbsp;профильной трубы', 'Ограждения из евроштакетника', 'Оригинальные ограждения', 'Другие<br>ограждения']
+    
+      each item, idx in items
+
+        a(href="#").products__item
+
+          span.products__img
+
+            img(src=`assets/img/products/i${idx+1}.png`, alt="#")
+
+          p.products__text!= item
+
+          span.products__triangle
+
+          span.products__arrow
+            img(src="assets/img/products/arrow-products.svg", alt="arrow")

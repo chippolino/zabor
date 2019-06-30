@@ -1,0 +1,45 @@
+header.header
+
+  .container
+
+    .header__wrap
+
+      a(href="#").header__logo
+        img(src="assets/img/logo2.svg", alt="Первая заборная компания")
+
+      .header__menu-mob.js-mob-menu
+        span
+      
+      .header__items
+
+        -
+          var items = [
+            {
+              icon: 'calc.svg',
+              text: 'Онлайн калькулятор',
+              href: '#calc'
+            },
+            {
+              icon: 'const.svg',
+              text: 'Конструктор заборов',
+              href: '#const'
+            }
+          ]
+
+        each item in items
+
+          a(href=`${item.href}`).header__item
+            .header__icon
+              img(src=`assets/img/header/${item.icon}`, alt="#")
+
+            p.header__text!= item.text
+
+      .header__phone-block
+
+        .header__phone
+          
+          img(src="assets/img/header/phone.svg", alt="Телефон")
+
+          a(href="tel:+78007752186") 8 (800) 775-21-86
+
+        a(href="#").header__btn.btn.btn--small.btn--green Заказать обратный звонок

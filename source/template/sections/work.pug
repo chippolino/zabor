@@ -1,0 +1,71 @@
+section.work.sect-top
+
+  .work__triangle.work__triangle--top
+  .work__triangle.work__triangle--bot
+
+  .work__bg-img
+    img(src="assets/img/work/work-logo.png", alt="#")
+
+  .container
+
+    .title.work__header как мы работаем?
+
+    .work__items
+
+      -
+        var items = [
+          {
+            img: 'img1',
+            title: 'Все работы от&nbsp;замера до&nbsp;установки под ключ или только часть, в&nbsp;зависимости от&nbsp;ваших потребностей!',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.'
+          },
+          {
+            img: 'img2',
+            title: 'Официальный договор и&nbsp;гарантия!',
+            text: 'Отвечаем за&nbsp;результат по&nbsp;договору! Наша компания дорожит своей репутацией. Мы&nbsp;работаем официально и&nbsp;строго по&nbsp;законодательству&nbsp;РФ, с&nbsp;заключением договора и&nbsp;осуществляем гарантийное обслуживание.',
+            left: 'left'
+          },
+          {
+            img: 'img3',
+            title: 'Замер и&nbsp;детальный расчет бесплатно!',
+            text: 'Приедем к&nbsp;вам, выполним все необходимые замеры, проконсультируем по&nbsp;всем вопросам, посчитаем смету&nbsp;&mdash; и&nbsp;все это бесплатно! Заказ заранее делать необязательно'
+          },
+          {
+            img: 'img4',
+            title: 'Начнем работы уже завтра!',
+            text: 'Срочные заказы выполняем вне очереди. Нужно срочно? Мы&nbsp;всегда готовы прийти на&nbsp;помощь, и&nbsp;выполнить срочные заказы в&nbsp;минимальные сроки. Звоните, начнем уже завтра!',
+            left: 'left'
+          },
+          {
+            img: 'img5',
+            title: 'Профессионально специализируемся на&nbsp;установке заборов!<br>Учитываем все нюансы на&nbsp;этапе проектирования.',
+            text: 'Тщательно оцениваем состояние грунта, перед установкой забора. Заливаем столбы ниже уровня замерзания, учитываем все допустимые риски, для того чтобы не&nbsp;допустить возможных ошибок и&nbsp;вы&nbsp;не&nbsp;сталкивались с&nbsp;проблемами изменений конструкции в&nbsp;любых погодных условиях.'
+          }
+        ]
+      
+      each item in items
+
+        if item.left
+          
+          div(class=`work__item ${item.left}`)
+            
+            .work__img
+              img(src=`assets/img/work/${item.img}.png`, alt="#")
+
+            .work__block
+
+              .work__title!= item.title
+
+              p.work__text!= item.text
+        else 
+
+          div(class=`work__item`)
+            
+            .work__img
+              img(src=`assets/img/work/${item.img}.png`, alt="#")
+
+            .work__block
+
+              .work__title!= item.title
+
+              p.work__text!= item.text

@@ -1,0 +1,54 @@
+section.reviews
+
+  .work__triangle.work__triangle--top
+  .work__triangle.work__triangle--bot
+
+  .container
+
+    .title Смотрите истории наших клиентов
+
+
+    .reviews__wrap
+
+      .reviews__item
+        .reviews__pag#myElement
+
+      .reviews__item
+        .swiper-container.js-reviews
+
+          .swiper-wrapper
+
+            - var n = 0;
+
+            while n < 8
+              .swiper-slide.reviews__block
+
+                .reviews__video
+                  iframe(data-src="//www.youtube.com/embed/0O2aH4XLbto?", frameborder="0" allowfullscreen class='swiper-lazy' width="100%" height="100%")
+                
+                .reviews__content
+                  img(src="assets/img/reviews/square.svg", alt="#" class="reviews__square")
+                  img(src="assets/img/reviews/square.svg", alt="#" class="reviews__square reviews__square_bot")
+                  a(href="#").reviews__name
+                    img(src="assets/img/reviews/vk.svg", alt="vk")
+                    span.reviews__fio Валентина Самодова
+                    span.reviews__age 3#{n++} лет
+
+                  .reviews__text
+                    p Пришло время установить забор по периметру нашего участка, и мы занялись поиском фирмы, которая бы сделала нам эту работу качественно и по цене, которая бы укладывалась в наш бюджет. Внимательно изучив предложения на рынке, по отзывам в интернете мы выбрали фирму. 
+                    p Общение с менеджерами и расчет будущих работ внушили нам оптимизм, и мы сделали заказ. В соответствии с договором, все работы были проведены в указанные сроки, мы получили такой забор, какой мы и хотели.
+                    p Спасибо за сотрудничество!
+        .reviews-button
+          .reviews-button-prev
+            img(src="assets/img/reviews/arrow.svg", alt="prev")
+            span Предыдущий отзыв
+          .reviews-button-next
+            img(src="assets/img/reviews/arrow.svg", alt="next")
+            span Следующий отзыв
+
+  script.
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var mas = ['assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png', 'assets/img/reviews/review.png'];
+      sliderReviews(mas);
+    });

@@ -1,0 +1,27 @@
+.work-about
+
+  .work__triangle.work__triangle--bot
+
+  .container
+
+    .title.work-about__title КАК МЫ РАБОТАЕМ?
+
+    .work-about__items
+
+      -
+        var items = [
+          'Все работы от&nbsp;замера до&nbsp;установки под ключ или только часть, в&nbsp;зависимости от&nbsp;ваших потребностей!',
+          'Официальный договор<br>и гарантия!',
+          'Замер и детальный расчет<br>бесплатно!',
+          'Начнем работы уже завтра!',
+          'Профессионально специализируемся на установке заборов!',
+          'Работаем круглый год'
+        ]
+
+      each item, idx in items
+        .work-about__col
+          .work-about__item
+            .work-about__img
+              img(src=`assets/img/work/i${idx+1}.png`, alt="#" class="img-responsive")
+
+            .work-about__text!= item

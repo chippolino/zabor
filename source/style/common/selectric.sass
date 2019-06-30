@@ -1,0 +1,38 @@
+.selectric
+  border: 1px solid #e4ece2
+  background-color: $white
+  transition: all 250ms
+
+  .button
+    border-radius: 3px
+    background-color: #71b05e
+    width: 32px
+    height: 32px
+    top: 50%
+    transform: translateY(-50%)
+    right: 10px
+
+    &:after
+      border: 6px solid transparent
+      border-top: 6px solid $white
+      top: 60%
+      transform: translateY(-50%)
+
+  .label
+    font-size: 20px
+    text-transform: none
+    font-weight: 800
+    color: $color-gray
+    margin-left: 31px
+    height: 48px
+    line-height: 48px
+
+.selectric-hover
+  
+  .selectric
+    border-color: #fac233
+
+    .button
+
+      &:after
+        border-top-color: $white

@@ -1,0 +1,60 @@
+.info-block
+  position: relative
+  padding-top: 98px
+  padding-bottom: 60px
+
+  @include tablet 
+    padding-top: 45px
+    padding-bottom: 30px
+
+  &__title
+    margin-bottom: 52px
+
+  &__wrap
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+    align-items: center
+
+    @include tablet
+      flex-wrap: wrap
+      justify-content: center
+
+  &__item
+    padding-left: 15px
+    padding-right: 15px
+    margin-right: 43px
+    flex: 0 1 auto
+
+    &:first-of-type
+      max-width: 250px
+      flex: 0 0 250px
+
+      img
+        display: block
+        max-width: 100%
+        height: auto
+
+    @include tablet
+      flex: 0 0 100%
+      max-width: 100%
+      margin-bottom: 30px
+      margin-right: 0
+
+      img
+        display: block
+        margin: 0 auto
+
+    &:last-of-type
+      margin-right: 0
+
+  &__text
+    color: $color-gray
+    font-size: 14px
+    position: relative
+    z-index: 2
+
+  &__subtitle
+    font-weight: 700
+    color: $color-gray
+    margin-bottom: 17px

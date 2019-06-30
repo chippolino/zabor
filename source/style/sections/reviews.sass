@@ -1,0 +1,234 @@
+.reviews
+  position: relative
+  padding: 96px 0
+
+  @include tablet
+    padding: 44px 0
+
+  &__wrap
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+    position: relative
+    z-index: 2
+
+    @include laptop
+      flex-wrap: wrap
+
+  &__item
+    flex: 0 0 50%
+    max-width: 50%
+    padding-left: 15px
+    padding-right: 15px
+
+    @include laptop
+      flex: 0 0 100%
+      max-width: 100%
+
+      &:first-of-type
+        order: 2
+
+  &__pag
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @include tablet
+      flex-wrap: nowrap
+      overflow-x: auto
+
+      .simplebar-content
+        display: flex
+
+      .simplebar-scrollbar:before
+        background-color: #71b05e
+      .simplebar-track .simplebar-scrollbar.simplebar-visible:before
+        opacity: 1
+
+      .simplebar-track.simplebar-horizontal
+        height: 16px
+
+      .simplebar-track.simplebar-horizontal .simplebar-scrollbar
+        height: 13px
+
+  &__pag-item
+    flex: 0 0 47%
+    max-width: 47%
+    padding-left: 15px
+    padding-right: 15px
+    width: 100%
+    height: 160px
+    background-color: transparent
+    border-radius: 3px
+    margin-bottom: 30px
+    opacity: 0.75
+    display: block
+    border: 2px solid transparent
+    transition: all 250ms ease
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    margin-right: 15px
+
+    &:nth-child(2n)
+      margin-right: 0
+
+      @include tablet
+        margin-right: 15px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 24px
+      height: 15px
+      background-image: url(../img/reviews/eye.svg)
+      z-index: 2
+      top: 12px
+      left: 12px
+      opacity: 0
+      transition: all 250ms ease
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      border-style: solid
+      top: 0
+      left: 0
+      border-width: 54px 84px 0 0
+      border-color: $color-green-dark transparent transparent transparent
+      opacity: 0
+      transition: all 250ms ease
+
+    &.swiper-pagination-bullet-active
+      opacity: 1
+
+      &:after,
+      &:before,
+        opacity: 1
+
+  &__content
+    position: relative
+
+  &__square
+    position: absolute
+    top: 0
+    right: 0
+
+    @include tablet
+      display: none
+
+    &_bot
+      top: auto
+      bottom: 0
+      transform: rotate(180deg)
+
+  &__block
+    border: 2px solid #eff6ed
+    border-radius: 6px
+    background-color: $white
+    padding: 33px
+    position: relative
+
+    @include tablet
+      padding: 15px
+
+  &__video
+    width: 100%
+    height: 287px
+    margin-bottom: 40px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      top: 0
+      left: 0
+      border-style: solid
+      border-width: 296px 471px 0 0
+      border-color: $color-green-dark transparent transparent transparent
+      z-index: -1
+
+    @include laptop
+      height: 352px
+
+    @include tablet
+      height: 244px
+
+  &__name
+    display: flex
+    align-items: center
+    text-decoration: none
+    margin-bottom: 14px
+
+    @include phones
+      flex-direction: column
+      text-align: center
+
+  &__fio
+    font-family: $klein
+    color: #659C55
+    font-size: 24px
+    margin-left: 15px
+    margin-right: 8px
+    text-decoration: underline
+
+    @include tablet
+      font-size: 18px
+
+  &__age
+    font-size: 18px
+    color: #7D817B
+
+  &__text
+    color: $color-gray-light
+    font-size: 14px
+
+    p
+      margin-bottom: 20px
+
+      &:last-of-type
+        margin-bottom: 0
+
+  &-button
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+    margin-top: 14px
+
+  &-button-next,
+  &-button-prev
+    display: flex
+    align-items: center
+    padding: 12px 23px
+    background-color: #eff6ed
+    border: 2px solid #eff6ed
+    box-shadow: 0 2px 0 #c2c2c2
+    border-radius: 3px
+    cursor: pointer
+    font-weight: bold
+    font-size: 14px
+
+    @include tablet
+      padding: 12px
+
+
+    span
+      color: $color-gray
+      margin-left: 14px
+
+      @include phones
+        display: none
+
+  &-button-next
+    flex-direction: row-reverse
+
+    span
+      margin-left: 0
+      margin-right: 14px
+
+    img
+      transform: rotate(180deg)

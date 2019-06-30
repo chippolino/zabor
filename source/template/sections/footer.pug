@@ -1,0 +1,105 @@
+footer(style="background-image: url(assets/img/footer/bg-footer.jpg)" class="footer")
+
+  .footer__bg-mob
+    img(src="assets/img/footer/footer-bg-mob.png", alt="первая заборная компания" class="img-reponsive")
+
+  .container
+
+    .footer__row.footer__row--bb
+
+      .footer__col.footer__col-2
+
+        .footer__logo
+          img(src="assets/img/footer/footer-logo.png", alt="" class="img-responsive")
+
+      .footer__col
+
+        .footer__wrap-menu
+
+          .footer__col.footer__col-order-1
+
+            .footer__wrap
+
+              .footer__block
+
+                .footer__subtitle Разделы сайта
+
+              .footer__menu
+
+                ul.footer__menu-items
+
+                  -
+                    var items = [
+                      'О компании',
+                      'Доставка и установка',
+                      'Прайс',
+                      'Наши работы',
+                      'Полезные статьи',
+                      'Политика конфиденциальности'
+                    ]
+                  each item in items
+                    li.footer__menu-item
+                      a(href="#")!= item
+
+          .footer__col.footer__col-order-3
+
+            .footer__wrap
+
+              .footer__block
+
+                .footer__subtitle Продукция
+
+              .footer__menu.footer__menu--d-flex
+
+                ul.footer__menu-items
+                  -
+                    var obj = [
+                      'Сетчатые ограждения',
+                      'Заборы из профнастила',
+                      'Ограждения из профильной трубы',
+                      'Модульные ограждения',
+                      'Деревянные заборы'
+                    ]
+                
+                  each item in obj
+
+                    li.footer__menu-item
+                      a(href="#")!= item
+                ul.footer__menu-items
+
+                  -
+                    var obj2 = [
+                      'Заборы из кирпича и бессера',
+                      'Заборы-жалюзи',
+                      'Ограждения детских и спортивных площадок',
+                      'Распашные и откатные ворота ',
+                      'Калиткиы'
+                    ]
+                
+                  each item in obj2
+                    li.footer__menu-item
+                      a(href="#")!= item
+
+          .footer__col.footer__col-20
+
+            .footer__wrap
+
+              .footer__block
+
+                .footer__subtitle КОНТАКТЫ
+
+              .footer__contacts
+
+                a(href="tel:+78007752186" class="footer__link footer__link--phone")
+                  img(src="assets/img/footer/phone.svg", alt="#")
+                  | 8(800) 775-21-86
+
+                a(href="mailt:some@mail.ru" class="footer__link")
+                  img(src="assets/img/footer/letter.svg", alt="#")
+                  | some@mail.ru
+
+                a(href="#" class="footer__link")
+                  img(src="assets/img/footer/map-marker.svg", alt="#")
+                  | г. Уфа
+
+    .footer__copyright &copy;&nbsp;&laquo;Первая заборная компания&raquo;, 2019

@@ -1,0 +1,148 @@
+.work
+  position: relative
+  padding-bottom: 96px
+
+  @include laptop
+    padding-bottom: 63px
+
+  @include tablet
+    padding-bottom: 32px
+
+  &__header
+    margin-bottom: 38px
+    position: relative
+    z-index: 2
+
+  &__bg-img
+    position: absolute
+    width: 90%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
+  &__triangle
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+
+    @include laptop
+      display: none
+
+    &--top
+      top: 0
+      left: 0
+      border-width: 250px 388px 0 0
+      border-color: $color-light transparent transparent transparent
+
+    &--bot
+      right: 0
+      bottom: 0
+      border-style: solid
+      border-width: 0 0 255px 405px
+      border-color: transparent transparent $color-light transparent
+
+  &__items
+    position: relative
+    z-index: 2
+
+  &__img
+
+    @include tablet
+      margin-top: 10px
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
+  &__item
+    border: 2px solid #e4ece2
+    border-radius: 3px
+    background-color: $white
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    position: relative
+
+    @include tablet
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+      margin-bottom: 18px
+
+    &:last-of-type
+      margin-bottom: 0
+
+    .work__img
+      margin-right: 30px
+
+      @include laptop
+        max-width: 33%
+
+      @include tablet
+        margin-right: 0
+
+    &.left
+      flex-direction: row-reverse
+
+      @include tablet
+        flex-direction: column
+      
+      .work__img
+        margin-left: 30px
+        margin-right: 0
+
+  &__block
+    max-width: 58.3%
+    width: 100%
+    padding: 50px 0
+
+    @include tablet
+      max-width: 100%
+      padding: 15px 50px 34px
+
+    @include phones
+      padding: 15px 15px 34px
+
+  &__title
+    font-weight: 700
+    color: $color-gray
+    line-height: 26px
+    font-size: 18px
+    margin-bottom: 20px
+
+    @include laptop
+      font-size: 16px
+
+    @include tablet
+      font-size: 14px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 40px
+      height: 4px
+      background-color: $color-green-light
+      top: -2px
+      z-index: 2
+      
+      @include tablet
+        left: 50%
+        transform: translateX(-50%)
+
+  &__text
+    color: $color-gray-light
+    font-size: 14px
+    font-weight: 400
+    padding: 0
+    margin: 0
+
+    @include tablet
+      font-size: 12px

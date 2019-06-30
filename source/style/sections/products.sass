@@ -1,0 +1,132 @@
+.products
+  background-color: $color-light
+  padding-bottom: 98px
+
+  @include tablet
+    padding-bottom: 80px
+
+  &__title
+    margin-bottom: 66px
+
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    @include desktop
+      justify-content: space-around
+
+  &__item
+    flex: 0 0 360px
+    max-width: 360px
+    margin-right: 29px
+    border: 2px solid $white
+    border-radius: 3px
+    box-shadow: 2px 3px 0 rgba(183, 196, 180, 0.2)
+    background-color: $white
+    margin-bottom: 63px
+    padding-left: 31px
+    display: flex
+    align-items: center
+    text-decoration: none
+    color: $color-gray
+    position: relative
+
+    @include desktop
+      margin-right: 10px
+
+    @include laptop
+      margin-right: 0
+      max-width: 344px
+      flex: 0 0 344px
+
+    @include tablet
+      max-width: 48%
+      flex: 0 0 48%
+      flex-direction: column
+      align-items: center
+      padding-left: 0
+      margin-bottom: 33px
+
+    &:nth-child(3n)
+      margin-right: 0
+
+    &:hover
+
+      > .products__arrow
+        visibility: visible
+        opacity: 1
+      
+      > .products__triangle
+        border-color: transparent transparent transparent $second
+
+  &__img
+    position: relative
+    top: -20px
+    margin-right: 37px
+    z-index: 2
+    display: block
+
+    @include tablet
+      margin-right: 0
+    
+    @include phones
+      width: 40%
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
+  &__text
+    font-size: 20px
+    font-family: $klein
+    text-transform: uppercase
+
+    @include laptop
+      font-size: 18px
+
+    @include tablet
+      text-align: center
+      position: relative
+      z-index: 2
+
+    @include phones
+      font-size: 16px
+
+  &__triangle
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 95px 0 0 155px
+    border-color: transparent transparent transparent $color-light
+    transition: all 250ms
+
+  &__arrow
+    position: absolute
+    width: 48px
+    height: 48px
+    box-shadow: 0 2px 0 #cb8f19
+    background-image: linear-gradient(to right, #f1a818 0%, #fcc737 100%)
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 5
+    left: 53px
+    visibility: hidden
+    opacity: 0
+    transition: all 250ms
+
+    @include tablet
+      width: 24px
+      height: 24px
+      left: 50%
+      transform: translateX(-50%)
+      top: 4px
+
+      img
+        width: 8px
