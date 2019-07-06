@@ -1,0 +1,54 @@
+section.articles
+
+  .container
+
+    .title ПОЛЕЗНЫЕ СТАТЬИ
+
+    .articles__subtitle по темам
+
+    .tab.js-tab
+
+      - var obj = ['Как выбрать', 'Как сделать', 'Как использовать', 'Вопрос-ответ']
+
+      .tab__links
+
+        each item, idx in obj
+
+          if idx == 0
+
+            .tab__col
+
+              .tab__link.js-tab-link.active(data-index=`${idx}`)!= item
+          else 
+            .tab__col
+
+              .tab__link.js-tab-link(data-index=`${idx}`)!= item
+
+      .tab__contents
+
+        - var items = 0
+
+        while items < 4
+
+          .tab__content.content-tab.js-tab-content(data-number=`${items++}`)
+
+            .aside-article-blocks
+
+              - var n = 0
+
+              while n < 5
+                .content-tab__block
+                  .aside-article-block.content-tab__item
+                    
+
+                    .aside-article-block__title.contnet-tab__title(style="background-image: url(assets/img/article/aside-img.jpg)") 
+                      span Сетчатое<br>ограждение<br>для вольера #{items}
+
+
+                    .aside-article-block__text
+                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et&nbsp;viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et&nbsp;magnis dis parturient montes.
+
+                    a(href="#").aside-article-block__link Читать статью
+
+                    .aside-article-block__arrow
+                      img(src="assets/img/products/arrow-products.svg", alt=`${n++}`)

@@ -1,5 +1,8 @@
 section.recommend
 
+  .work__triangle.work__triangle--top
+  .work__triangle.work__triangle--bot
+
   .container
 
     .title.recommend__title-top Рекомендуемые товары
@@ -17,11 +20,10 @@ section.recommend
             .recommend__img
               img(src="assets/img/article/aside-img.jpg", alt=`${item}` class="img-responsive")
 
-            .recommend__block
               
-              .recommend__title!= item
+            .recommend__title!= item
 
-              .recommend__text 
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
+            .recommend__text 
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
 
-              a(href="#").btn.btn--green.btn--small.recommend__btn Читать подробнее
+            a(href="#").btn.btn--green.btn--small.recommend__btn Читать подробнее

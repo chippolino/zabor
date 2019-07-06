@@ -1,0 +1,43 @@
+section.install
+
+  .work__triangle.work__triangle--top
+  .work__triangle.work__triangle--bot
+
+  .container
+
+    h1.title Все работы от замера до установки под ключ<br>или только часть, в зависимости от ваших потребностей!
+
+
+    .install__wrap
+
+      .install__img
+        img(src="assets/img/delivery/img.png", alt="ВСЕ РАБОТЫ ОТ ЗАМЕРА ДО УСТАНОВКИ ПОД КЛЮЧ ИЛИ ТОЛЬКО ЧАСТЬ, В ЗАВИСИМОСТИ ОТ ВАШИХ ПОТРЕБНОСТЕЙ!")
+
+
+      .install__items
+
+        -
+          var obj = [
+            {
+              item: ['Замер и расчет', 'Помощь с выбором типа забора исходя из потребностей']
+            },
+            {
+              item: ['Консультация по особенностям каждого из видов', 'Заказ необходимых материалов']
+            },
+            {
+              item: ['Монтаж и<br>установка забора', 'Гарантийное<br>обслуживание']
+            }
+          ]
+
+        each item in obj
+        
+          .install__row
+
+            each itm in item.item
+
+              .install__item
+
+                .install__img
+                  img(src="assets/img/delivery/low-ok.svg", alt="ok")
+            
+                .install__text!= itm

@@ -1,0 +1,58 @@
+.contacts
+
+  &__map
+    min-height: 512px
+    height: 100%
+    position: relative
+    background-color: $color-light
+    margin-bottom: -50px
+
+  &__block
+    max-width: 555px
+    background: $white
+    border: 2px solid #e4ece2
+    border-radius: 4px
+    padding: 64px
+    position: relative
+    z-index: 5
+    position: absolute
+    right: calc( (100vw - 1200px) / 2 )
+    top: 50%
+    transform: translateY(-50%)
+
+    @include desktop
+      right: 50px
+
+    @include laptop
+      position: relative
+      margin: 0 auto
+      top: 0
+      right: 0
+      transform: translateY(-50%)
+
+    @include phones
+      padding: 32px
+  &__img
+    position: absolute
+    bottom: 0
+    right: 0
+
+  &__title
+    margin-bottom: 42px
+
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 21px
+
+  &__text
+    color: $color-gray
+    font-size: 16px
+    font-weight: 400
+
+    a
+      text-decoration: none
+      color: $color-gray
+
+  &__icon
+    margin-right: 17px
