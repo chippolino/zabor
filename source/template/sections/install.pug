@@ -29,15 +29,15 @@ section.install
             }
           ]
 
-        each item in obj
+        each item, idx in obj
         
-          .install__row
+          .install__row(class=`install__row_${idx+1}`)
 
             each itm in item.item
 
               .install__item
 
-                .install__img
+                .install__item-img
                   img(src="assets/img/delivery/low-ok.svg", alt="ok")
             
                 .install__text!= itm

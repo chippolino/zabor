@@ -109,13 +109,17 @@
 
   &__btn
     position: relative
-    min-width: 262px
+    max-width: 262px
     width: 100%
     min-height: 62px
     font-size: 14px
     font-weight: 700
     color: #fffefe
     padding-left: 10px
+
+    @include laptop
+      min-width: 262px
+      max-width: none
 
   &__img-btn
     position: absolute
