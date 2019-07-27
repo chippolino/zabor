@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
   initSimplebar();
   articeSlider();
   tabs();
+  swapBigImg();
+  projectsTabLinkSwiper()
 });
 
 
@@ -19,21 +21,22 @@ function tabs() {
   var tab = document.querySelector('.js-tab');
   var link = document.querySelectorAll('.js-tab .js-tab-link');
   
-  
-  tab.addEventListener('click', function(e) {
-    
-    if(e.target.classList.contains('js-tab-link')) {
-      var index = e.target.getAttribute('data-index');
-      var content = document.querySelectorAll('.js-tab-content');
-      content.forEach(function(item, idx) {
-        link[idx].classList.remove('active');
-        item.classList.remove('active');
-      });
-      e.target.classList.add('active');
-      content[index].classList.add('active');
-    }
-  });
-  link[0].click();
+  if (tab) {
+    tab.addEventListener('click', function(e) {
+      
+      if(e.target.classList.contains('js-tab-link')) {
+        var index = e.target.getAttribute('data-index');
+        var content = document.querySelectorAll('.js-tab-content');
+        content.forEach(function(item, idx) {
+          link[idx].classList.remove('active');
+          item.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        content[index].classList.add('active');
+      }
+    });
+    link[0].click();
+  }
 }
 
 function initSimplebar() {
@@ -47,6 +50,19 @@ function initSelectric() {
 
 function initMaskPhone() {
   $(".js-phone").mask("+7 (000) 000-00-00");
+}
+
+function projectsTabLinkSwiper() {
+  var mySwiper = new Swiper('.js-projects-tab-link', {
+    slidesPerView: 6,
+    spaceBetween: 30,
+    loop: false,
+    simulateTouch: false,
+    navigation: {
+      nextEl: ".single-projects__link-btn-next",
+      prevEl: ".single-projects__link-btn-prev"
+    }
+  });
 }
 
 function initSlider() {
@@ -158,6 +174,7 @@ function photoSlider() {
   }
 }
 
+// вызывается в коде html
 function sliderReviews(item) {
   var mass = item;
 
@@ -167,8 +184,8 @@ function sliderReviews(item) {
     pagination: {
       el: '.reviews__pag',
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="swiper-pagination-bullet reviews__pag-item" style="background-image: url(' + mass[index] + ')"></span>';
+      renderBullet: function (index) {
+        return '<span class="swiper-pagination-bullet ' + mass[index].class +  '" style="background-image: url(' + mass[index].img + ')"></span>';
       },
     },
     navigation: {
@@ -215,4 +232,22 @@ function articeSlider() {
     galleryThumbs.controller.control = galleryTop;
   }
 
+}
+
+
+function swapBigImg() {
+  var bigImg = document.querySelector('.js-img-big img');
+  var smallImg = document.querySelector('.js-img-small');
+  var allImg = document.querySelectorAll('.js-img-small img');
+  if (bigImg) {
+    allImg[0].classList.add('active');
+    smallImg.addEventListener('click', function(e) {
+      allImg.forEach(function(item) {
+        item.removeAttribute('class');
+      });
+      e.target.classList.add('active');
+      var src = e.target.getAttribute('src');
+      bigImg.setAttribute('src', src);
+    });
+  }
 }

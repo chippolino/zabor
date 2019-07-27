@@ -4,10 +4,10 @@
 
     .single-product__title-block
 
-      .title СЕТЧАТЫЕ ОГРАЖДЕНИЯ
+      .title деревянные забор ДЛЯ ДАЧИ
 
       .single-product__img-icon
-        img(src="assets/img/products/i1.png", alt="Сетчатые ограждения")
+        img(src="assets/img/products/i4.png", alt="Сетчатые ограждения")
 
     .single-product__wrap
 
@@ -36,25 +36,43 @@
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
 
         .single-product__desc.single-product__desc_low 
-          span Подвиды ограждений
+          span Характеристики
           span.single-product__line
 
-        .single-product__items
+        .single-product__spec
           
           -
-            var items = ['3D-забор для ограждения участка', '3D-ограждения для спортивной площадки', '3D-ограждения для промышленных объектов', '3D-ограждения для города', 'Временные сетчатые ограждения']
+            var items = [
+              {
+                name: 'Толщина листа:',
+                end: '0,4 мм'
+              },
+              {
+                name: 'Покрытие:',
+                end: 'Порошковая краска'
+              },
+              {
+                name: 'Ширина панелей:',
+                end: '1800 см'
+              },
+              {
+                name: 'Сечение столбов:',
+                end: '24 см'
+              }
+            ]
 
           each item, idx in items
-            a(href="#").single-product__item
-
-              img(src=`assets/img/products/s/icon-${idx+1}.svg`, alt="#")
-              span!= item
+            .single-product__dots
+              
+              .single-product__name!= item.name
+              .single-product__dot
+              .single-product__value!= item.end
 
         .single-product__price-block
-          .single-product__price
+          .single-product__price.single-product__price_second
             span ЦЕНА:&nbsp;
             span от <strong> 10 000 <b>руб</b></strong>
 
-          a(href="#").single-product__calc
+          a(href="#").single-product__calc.single-product__calc_second
             img(src="assets/img/products/qs.svg", alt="#")
             span Посчитать цену точнее

@@ -1,0 +1,28 @@
+article.single-plus(style="background-image: url(assets/img/bg-p.jpg)")
+
+
+  .container
+
+    .title.single-plus__title ПРЕимущества сетчатых заборов
+
+    .single-plus__items
+
+      - var items = ['Экологическая чистота', 'Хорошая защита от проникновения', 'быстрота<br>монтажа', 'срок службы<br>до&nbsp;7-8 лет', 'ВЫСОКАЯ сопротивляемость гнили и ВЛАГЕ', 'Сочетаемость с различными материалами']
+
+      each item in items
+
+        .single-plus__item
+
+          .single-plus__block
+
+            .single-plus__star
+
+              img(src="assets/img/star.svg", alt="star")
+
+            .single-plus__text!= item
+
+    .single-plus__btn-wrap
+      a(href="#").single-plus__btn.btn.btn--yellow.btn--big
+        img(src="assets/img/price-btn.svg", alt="#")
+        | Смотреть прайс
+      

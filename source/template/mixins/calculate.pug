@@ -1,0 +1,98 @@
+mixin calculate(bg)
+  section.calculate&attributes(attributes)= bg
+
+    .calculate__triangle
+
+    .container
+
+      .title.calculate__title Рассчитать стоимость забора с&nbsp;помощью онлайн калькулятора
+
+      
+      .calculate__wrap
+
+        .calculate__block
+
+          .calculate__img
+
+            .calculate__subtitle Укажите расстояния<br>участка в метрах
+
+            img(src="assets/img/calculate/house.png", alt="Дом" class="calculate__house")
+
+            input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--top")
+            input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--left")
+            input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--right")
+            input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--bottom")
+
+          .calculate__btns
+
+            a(href="#modal-2").btn.btn--yellow.btn--big.js-popup
+              img(src="assets/img/calculate/zabor.svg", alt="")
+              span Заказать забор
+
+            a(href="#modal-1").btn.btn--green.btn--big.js-popup
+              img(src="assets/img/calculate/call.svg", alt="")
+              span Вызвать замерщика
+
+
+        form.calculate__form
+
+          .calculate__form-calc
+            label.calculate__label
+              span.calculate__label-span
+                img(src="assets/img/calculate/vid.svg", alt="")
+                | Вид забора
+
+              select(name="" class="js-select calculate__select")
+                option(value="") Еврозабор
+                option(value="") Еврозабор2
+                option(value="") Еврозабор3
+                option(value="") Еврозабор4
+                option(value="") Еврозабор5
+
+            label.calculate__label
+              span.calculate__label-span
+                img(src="assets/img/calculate/height.svg", alt="")
+                | Высота забора
+
+              select(name="" class="js-select calculate__select")
+                option(value="") Еврозабор
+                option(value="") Еврозабор2
+                option(value="") Еврозабор3
+                option(value="") Еврозабор4
+                option(value="") Еврозабор5
+
+            label.calculate__label
+              span.calculate__label-span
+                img(src="assets/img/calculate/amount.svg", alt="")
+                | Количество ворот
+
+              select(name="" class="js-select calculate__select")
+                option(value="") Еврозабор
+                option(value="") Еврозабор2
+                option(value="") Еврозабор3
+                option(value="") Еврозабор4
+                option(value="") Еврозабор5
+            label.calculate__label
+              span.calculate__label-span
+                img(src="assets/img/calculate/sum.svg", alt="")
+                | Количество калиток
+
+              select(name="" class="js-select calculate__select")
+                option(value="") Еврозабор
+                option(value="") Еврозабор2
+                option(value="") Еврозабор3
+                option(value="") Еврозабор4
+                option(value="") Еврозабор5
+
+            .calculate__cost
+
+              .calculate__cost-text
+
+                img(src="assets/img/calculate/pocket.svg", alt="")
+
+                span Предварительная<br>стоимость: 
+
+              .calculate__cost-sum 
+                | 5800
+                span руб
+

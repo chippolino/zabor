@@ -1,0 +1,150 @@
+.single-projects
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  padding-top: 97px
+  padding-bottom: 96px
+
+  &__title
+    color: $white
+
+  &__tab-link
+    width: 165px
+    height: 96px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    opacity: 0.75
+    border: 3px solid transparent
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      width: 17px
+      height: 10px
+      background-image: url(../img/reviews/eye.svg)
+      background-size: cover
+      z-index: 2
+      top: 12px
+      left: 12px
+      transition: all 250ms ease
+      opacity: 0
+
+    &.active
+      opacity: 1
+      border: 3px solid #fac233
+
+      &:before
+        opacity: 1
+
+      .single-projects__triangle
+        opacity: 1
+
+  &__triangle
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    top: 0
+    left: 0
+    border-width: 54px 84px 0 0
+    border-color: #fac233 transparent transparent transparent
+    transition: all 250ms ease
+    opacity: 0
+
+  &__triangle-orange
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    top: 0
+    left: 2px
+    border-width: 167px 265px 0 0
+    border-color: #fac233 transparent transparent transparent
+    transition: all 250ms ease
+
+  &__quotes
+    position: absolute
+    right: 44px
+    top: 38px
+
+    img
+      display: block
+      max-width: 62px
+      width: 62px
+      height: 42px
+      transform: scale(1, -1) rotate(180deg)
+
+  &__content
+    position: relative
+    border-radius: 6px
+    background-color: #fff
+    border: 2px solid #eff6ed
+    padding: 64px 68px 64px 82px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 0 210px 330px
+      border-color: transparent transparent $color-green-dark transparent
+      bottom: -2px
+      right: -2px
+      transition: all 250ms ease
+
+  &__wrap
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+
+  &__col
+    padding-left: 15px
+    padding-right: 15px
+    flex: 1 1 auto
+    position: relative
+    z-index: 2
+
+  &__subtitle
+    font-size: 32px
+    color: $color-gray
+    letter-spacing: 1.28px
+    font-family: $klein
+    margin-bottom: 18px
+
+  &__text
+    color: $color-gray-light
+    font-size: 14px
+    line-height: 20px
+    position: relative
+    overflow: hidden
+
+  &__line
+    position: absolute
+    bottom: 0
+
+    &:before
+      content: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ' '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ' '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ '
+      display: block
+      overflow: hidden
+      text-overflow: clip
+      white-space: nowrap
+      position: relative
+      z-index: -1
+ 
+    p
+      margin-bottom: 20px
+
+      &:last-of-type
+        margin-bottom: 0
+
+  &__second-img
+    display: flex
+
+    img
+      display: block
+      flex: 1 1 auto
+      max-width: 100%
+      height: auto

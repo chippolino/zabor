@@ -1,0 +1,75 @@
+article.single-projects(style="background-image: url(assets/img/projects/bg.jpg)")
+
+  .container
+
+    .title.single-projects__title Посмотрите проекты, выполненные с деревянными заборами
+
+    .js-tab.single-projects__tab
+      .swiper-container.js-projects-tab-link
+
+        .swiper-wrapper
+
+          - var n = 0
+
+          while n < 6
+
+            .single-projects__tab-link.swiper-slide.js-tab-link(style="background-image: url(assets/img/projects/img-top.png)" data-index=`${n++}`)
+              .single-projects__triangle
+
+        .single-projects__link-btn-next
+        .single-projects__link-btn-prev
+
+      .tab-contents
+
+        - var n = 0
+
+        while n < 6
+
+          .tab-content.content-tab.js-tab-content
+            .single-projects__content
+              .single-projects__triangle-orange
+
+              .single-projects__quotes
+                img(src="assets/img/reviews/square.svg", alt="#")
+
+              .single-projects__wrap
+
+                .single-projects__col
+
+                  .single-projects__main-img
+                    img(src="assets/img/projects/img-1.jpg", alt=`${n++}`)
+
+                  .single-projects__second-img
+
+                    .single-projects__second-img-block
+                      img(src="assets/img/projects/img-1.jpg", alt="#")
+                    .single-projects__second-img-block
+                      img(src="assets/img/projects/img-1.jpg", alt="#")
+                    .single-projects__second-img-block
+                      img(src="assets/img/projects/img-1.jpg", alt="#")
+                    .single-projects__second-img-block
+                      img(src="assets/img/projects/img-1.jpg", alt="#")
+
+                .single-projects__col
+
+                  .single-projects__subtitle Суворова Нтаалья
+
+                  .single-projects__text
+                    .single-projects__line
+                    p Пришло время установить забор по&nbsp;периметру нашего участка, и&nbsp;мы&nbsp;занялись поиском фирмы, которая&nbsp;бы сделала нам эту работу качественно и&nbsp;по&nbsp;цене, которая&nbsp;бы укладывалась в&nbsp;наш бюджет. Внимательно изучив предложения на&nbsp;рынке, по&nbsp;отзывам в&nbsp;интернете мы&nbsp;выбрали фирму. 
+
+                    p Общение с&nbsp;менеджерами и&nbsp;расчет будущих работ внушили нам оптимизм, и&nbsp;мы&nbsp;сделали заказ. В&nbsp;соответствии с&nbsp;договором, все работы были проведены в&nbsp;указанные сроки, мы&nbsp;получили такой забор, какой мы&nbsp;и&nbsp;хотели.
+
+                    p Спасибо за&nbsp;сотрудничество!
+      
+            
+      .single-projects-arrow-tab
+
+        .single-projects-arrow-tab__next
+          img(src="assets/img/article/arrow.svg", alt="#")
+        .single-projects-arrow-tab__prev
+          img(src="assets/img/article/arrow.svg", alt="#")
+
+
+          
+
