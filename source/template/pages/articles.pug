@@ -1,0 +1,14 @@
+extends ../_template
+block variables
+  - var title = ''
+
+block content
+  body
+
+    include ../sections/top-line
+    .menu-container
+      include ../sections/header
+      include ../sections/menu
+    include ../sections/articles
+    include ../sections/footer
+    include ../sections/popup

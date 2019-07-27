@@ -1,6 +1,20 @@
 .recommend
   padding-top: 97px
   padding-bottom: 96px
+  background-color: $color-light
+  position: relative
+
+  @include laptop
+    padding-bottom: 64px
+
+  @include tablet
+    padding-bottom: 32px
+
+  .work__triangle--top
+    border-color: $white transparent transparent transparent
+
+  .work__triangle--bot
+    border-color: transparent transparent $white transparent
 
   &__title-top
     margin-bottom: 66px
@@ -14,17 +28,38 @@
   &__col
     padding-left: 15px
     padding-right: 15px
-    flex-basis: 0
-    flex-grow: 1
-    max-width: 100%
+    max-width: 25%
+    flex: 0 0 25%
+
+    @include laptop
+      max-width: 50%
+      flex: 0 0 50%
+      margin-bottom: 32px
+
+    @include tablet
+      max-width: 100%
+      flex: 0 0 100%
+
+      &:last-of-type
+        margin-bottom: 0
 
   &__item
     background-color: #fff
     border: 1px solid #e4ece2
     border-radius: 4px
     height: 100%
+    padding: 30px 26px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    position: relative
+    z-index: 2
 
   &__img
+    margin-top: -30px
+    margin-left: -26px
+    margin-right: -26px
+    margin-bottom: 29px
 
     img
       width: 100%
@@ -42,6 +77,19 @@
     color: #7d817b
     font-size: 12px
     line-height: 20px
+    margin-bottom: 37px
 
     p
       margin: 0
+
+  &__btn
+    margin-top: auto
+    padding-top: 16px
+    padding-bottom: 18px
+    font-size: 14px
+
+    &:hover
+      background-image: linear-gradient(to right, #f1a818 0%, #fcc737 100%)
+      background-color: #6fc256
+      box-shadow: 0 2px 0 #cb8f19
+      color: $white

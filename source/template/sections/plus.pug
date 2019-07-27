@@ -1,0 +1,32 @@
+section.plus
+
+  .container
+
+    .plus__items
+
+      - var obj = ['Доставка', 'Установка и монтаж', 'Бесплатный выезд замерщика и подробный расчет']
+
+      each item, idx in obj
+
+        .plus__item
+
+          img(src="assets/img/delivery/ok.svg", alt="" class="plus__img")
+
+          .plus__icon
+            img(src=`assets/img/delivery/icon-${idx+1}.png`, alt=`${item}`)
+
+          .plus__block
+
+            .plus__title!= item
+
+            .plus__text
+
+              p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш ему его, речью пустился языком имеет использовало ручеек то на берегу путь текстами, пор они страну семь всемогущая подпоясал снова.
+
+    .calling__phone
+      .calling__phone-text
+        | Телефон для заявок <a href="tel:+7000000000">+7 000 00-00-00</a> или оформите быструю заявку прямо на сайте
+
+      .calling__phone-arrow
+      .calling__phone-arrowcut
+      .calling__phone-arrow-last
