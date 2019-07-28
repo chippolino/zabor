@@ -1,0 +1,114 @@
+.ex-portfolio
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  padding-top: 96px
+  padding-bottom: 96px
+
+  &__title
+    margin-bottom: 70px
+    color: #fff
+
+  &__container
+    padding-left: 30px
+    padding-right: 30px
+    margin-bottom: 32px
+
+  &__tab-link
+    position: relative
+    padding: 32px
+    box-shadow: 2px 3px 0 rgba(183, 196, 180, 0.2)
+    border: 3px solid #ffffff
+    border-radius: 3px
+    background-color: #ffffff
+    cursor: pointer
+
+    &.active
+      border-color: #fac233
+
+      svg
+        fill: #FAC233
+
+    span
+      pointer-events: none
+      color: $color-gray
+      font-weight: 600
+      font-size: 14px
+
+  &__svg
+    position: absolute
+    right: 0
+    fill: #71b05e
+    top: 50%
+    transform: translateY(-50%)
+
+
+.ex-portfolio-rev
+
+  &__title
+    font-weight: 700
+    font-size: 16px
+    color: $color-gray
+    margin-bottom: 23px
+
+  &__wrap
+    display: flex
+
+    @include phones
+      flex-wrap: wrap
+
+  &__video
+    margin-right: 15px
+    position: relative
+
+    @include phones
+      margin-right: 0
+      margin-bottom: 30px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      background-color: #71B05E
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    &:after
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      top: 50%
+      left: 51%
+      transform: translate(-50%, -50%)
+      border-top: 8px solid transparent
+      border-bottom: 8px solid transparent
+      border-left: 10px solid #fff
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
+  &__link
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 600
+    color: $color-gray
+    box-shadow: 2px 3px 0 rgba(183, 196, 180, 0.2)
+    border: 2px solid #eff6ed
+    border-radius: 3px
+    background-color: #ffffff
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 17px 32px 21px 20px
+
+    img
+      display: block
+      max-width: 100%
+      height: auto

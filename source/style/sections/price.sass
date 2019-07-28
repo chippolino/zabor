@@ -1,0 +1,208 @@
+.price
+
+  &__
+  
+
+.price-sec-link
+  background-color: $bg-light
+  padding-top: 91px
+  padding-bottom: 88px
+
+
+.price-content
+  
+  &__img-block
+    margin-bottom: 78px
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      object-fit: cover
+      object-position: center center
+
+  &__title-link
+    color: $color-gray
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 28px
+
+    a
+      text-decoration: none
+      color: #71B05E
+
+  &__wrap
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+
+  &__col
+    flex: 0 0 75%
+    max-width: 75%
+    padding-left: 15px
+    padding-right: 15px
+
+    &_3
+      flex: 0 0 25%
+      max-width: 25%
+
+  &__img-block
+    display: flex
+    flex-wrap: wrap
+    border: 1px solid #e4ece2
+    background-color: #fff
+    border-radius: 3px
+    padding: 30px 0
+
+  &__img
+    flex: 0 0 100%
+    max-width: 100%
+    margin-bottom: 20px
+
+    img
+      display: block
+      max-width: 100%    
+      height: auto
+      margin: 0 auto
+  
+  &__img-text
+    font-size: 12px
+    color: $color-gray-light
+    text-align: center
+    max-width: 100%
+    width: 170px
+    text-align: center
+    margin: 0 auto
+
+  &__main
+    display: flex
+
+  &__block
+    display: flex
+
+  &__text
+    color: $color-gray-light
+    font-size: 14px
+    line-height: 24px
+
+    p
+      margin: 0
+
+  &__character
+    padding-left: 60px
+    
+  &__subtitle
+    width: 100%
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    color: $color-gray
+    font-weight: 700
+    font-size: 14px
+    padding-bottom: 21px
+    border-bottom: 1px solid #e4ece2
+    position: relative
+    margin-bottom: 23px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 1px
+      bottom: -1px
+      left: 0
+      background-color: #71b05e
+
+    svg
+      margin-right: 14px
+      flex: 0 0 auto
+
+    span
+      display: block
+      flex: 0 0 auto
+  
+  &__desc
+    display: flex
+    word-wrap: 100%
+    font-weight: bold
+    text-transform: uppercase
+    color: $color-gray
+    font-size: 14px
+    margin-bottom: 32px
+
+    span
+      flex: 0 0 auto
+
+    &-line
+      display: block
+      max-width: 100%
+      width: 100%
+      border-bottom: 1px solid #dbe9d7
+      position: relative
+      top: -4px
+      margin-left: 22px
+
+  &__table-wrap
+    max-width: 100%
+    overflow-x: atuo
+
+  &__table
+    width: 100%
+    color: $color-gray
+    font-weight: 600
+    font-size: 12px
+    text-align: center
+
+  &__t-row
+    display: flex
+    border-bottom: 1px solid #e4ece2
+
+    &:first-of-type
+      background-color: #f1f5f0
+      border-top: 1px solid #e4ece2
+
+    &:nth-child(odd)
+      background-color: #f1f5f0
+  
+  &__t-col
+    flex: 0 0 33.333%
+    max-width: 33.333%
+    padding: 10px 0
+    border-right: 1px solid #e4ece2
+
+    &:first-of-type
+      border-left: 1px solid #e4ece2
+
+.price-content-dots
+  display: flex
+  margin-bottom: 20px
+  width: 100%
+  max-width: 300px
+
+  &__name
+    flex: 1 0 auto
+    font-size: 12px
+    color: $color-gray
+    font-weight: 600
+
+  &__dot
+    flex: 0 1 auto
+    overflow: hidden
+    font-size: 12px
+    color: $color-gray-light
+    font-weight: 300
+    padding: 0 8px 0 20px
+
+    &:before
+      display: block
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: clip
+      content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "
+
+  &__value
+    flex: 1 0 auto
+    font-size: 12px
+    font-weight: 700
+    color: #71b05e

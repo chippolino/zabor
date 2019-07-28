@@ -13,10 +13,33 @@ document.addEventListener("DOMContentLoaded", function() {
   articeSlider();
   tabs();
   swapBigImg();
-  projectsTabLinkSwiper()
+  projectsTabLinkSwiper();
+  initMaskNumber();
+  mfpVideo();
+  // selectChoiceZabor();
 });
 
+function mfpVideo() {
+  var video = $('.js-popup-video');
+  if(video) {
+    video.magnificPopup({
+      type: 'iframe',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false,
+      callbacks: {
+        open: function() {
+          $('body').addClass('popup');
+        },
+        
+        close: function() {
+          $('body').removeAttr('class');
+        },
+      }
+    });
 
+  }
+}
 function tabs() {
   var tab = document.querySelector('.js-tab');
   var link = document.querySelectorAll('.js-tab .js-tab-link');
@@ -36,8 +59,40 @@ function tabs() {
       }
     });
     link[0].click();
+    tabArrow(link);
   }
 }
+
+function tabArrow(link) {
+  var linkArray = Array.from(link);
+  var arrow = document.querySelector('.js-tab-arrow');
+  if(arrow) {
+    arrow.addEventListener('click', function(e) {
+      if(e.target.classList.contains('js-tab-prev')) {
+        link.forEach(function(item, idx) {
+          if (item.classList.contains('active')) {
+            if (idx != 0) {
+              link[idx-1].click();
+            }
+          }
+        });
+      }
+      if (e.target.classList.contains('js-tab-next')) {
+        linkArray.every(function(item, idx) {
+          if (item.classList.contains('active')) {
+            if (idx != link.length -1) {
+              link[idx+1].click();
+              return false;
+            }
+          } else {
+            return true;
+          }
+        });
+      }
+    })
+  }
+}
+
 
 function initSimplebar() {
   if (document.documentElement.offsetWidth < 768 && document.getElementById('myElement')) {
@@ -52,15 +107,58 @@ function initMaskPhone() {
   $(".js-phone").mask("+7 (000) 000-00-00");
 }
 
+function initMaskNumber() {
+  var number = document.querySelectorAll('.js-number');
+  if(number) {
+    number.forEach(function(item) {
+      var numberMask = IMask(
+        item,
+        {
+          mask: Number,
+          min: 0,
+          max: 100000,
+          thousandsSeparator: ' '
+        });
+    })
+  }
+}
+
+function selectChoiceZabor() {
+  var zabor = document.querySelector('.js-view-zabor');
+  zabor.addEventListener('change', function(e) {
+    console.log(e);
+    console.log(e.target.value);
+  });
+}
+
 function projectsTabLinkSwiper() {
   var mySwiper = new Swiper('.js-projects-tab-link', {
-    slidesPerView: 6,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     loop: false,
     simulateTouch: false,
     navigation: {
       nextEl: ".single-projects__link-btn-next",
       prevEl: ".single-projects__link-btn-prev"
+    }
+  });
+
+  var swiper = new Swiper('.js-ex-portf-slider', {
+    slidesPerView: '3',
+    spaceBetween: 30,
+    loop: false,
+    simulateTouch: false,
+    navigation: {
+      nextEl: ".single-projects__link-btn-next",
+      prevEl: ".single-projects__link-btn-prev"
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 1
+      }
     }
   });
 }
@@ -236,18 +334,24 @@ function articeSlider() {
 
 
 function swapBigImg() {
-  var bigImg = document.querySelector('.js-img-big img');
-  var smallImg = document.querySelector('.js-img-small');
-  var allImg = document.querySelectorAll('.js-img-small img');
-  if (bigImg) {
-    allImg[0].classList.add('active');
-    smallImg.addEventListener('click', function(e) {
-      allImg.forEach(function(item) {
-        item.removeAttribute('class');
+  var wrapBig = document.querySelectorAll('.js-change-big-img');
+  if (wrapBig) {
+    wrapBig.forEach(function(item) {
+      var bigImg = item.querySelector('.js-img-big img');
+      var smallImg = item.querySelector('.js-img-small');
+      var allImg = item.querySelectorAll('.js-img-small img');
+      allImg[0].classList.add('active');
+      smallImg.addEventListener('click', function(e) {
+        
+        if(!e.target.classList.contains('js-img-small')) {
+          allImg.forEach(function(item) {
+            item.removeAttribute('class');
+          });
+          e.target.classList.add('active');
+          var src = e.target.getAttribute('src');
+          bigImg.setAttribute('src', src);
+        }
       });
-      e.target.classList.add('active');
-      var src = e.target.getAttribute('src');
-      bigImg.setAttribute('src', src);
     });
   }
 }

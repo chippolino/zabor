@@ -1,26 +1,28 @@
-article.single-projects(style="background-image: url(assets/img/projects/bg.jpg)")
+article.ex-portfolio(style="background-image: url(assets/img/projects/bg.jpg)")
 
   .container
 
-    .title.single-projects__title Посмотрите проекты, выполненные с деревянными заборами
+    .ex-portfolio__title.title Смотрите примеры выполненных работ
 
     .js-tab.single-projects__tab
 
-      .single-projects__container
+      .single-projects__container.ex-portfolio__container
         .single-projects__link-btn-next
           img(src="assets/img/arrow.svg", alt="#")
         .single-projects__link-btn-prev
           img(src="assets/img/arrow.svg", alt="#")
-        .swiper-container.js-projects-tab-link
+        .swiper-container.js-ex-portf-slider
 
           .swiper-wrapper
 
-            - var n = 0
+            - var obj = ['Ограждение оборудования<br>на территории магазина IKEA', 'Ограждение спортивных<br>площадок в микрорайоне "Яркий', '3D-ограждение спорт-площадки (Аксаковская Гимназия, Уфа)', 'Ограждение оборудования<br>на территории магазина IKEA', 'Ограждение спортивных<br>площадок в микрорайоне "Яркий', '3D-ограждение спорт-площадки (Аксаковская Гимназия, Уфа)']
 
-            while n < 6
+            each item, n in obj
+              .ex-portfolio__tab-link.swiper-slide.js-tab-link(data-index=`${n}`)
+                span!= item
 
-              .single-projects__tab-link.swiper-slide.js-tab-link(style="background-image: url(assets/img/projects/img-top.png)" data-index=`${n++}`)
-                .single-projects__triangle
+                svg(xmlns="http://www.w3.org/2000/svg" width="38" height="65" viewBox="0 0 38 65" class='ex-portfolio__svg')
+                  path(d="M26.5 65V54.166C11.864 54.166 0 42.041 0 27.083 0 12.125 11.864 0 26.5 0 41.133 0 53 12.125 53 27.083 53 51.458 26.5 65 26.5 65zM14.482 28.342l9.368 9.575 14.988-15.319-3.747-3.83-11.241 11.49-5.62-5.745z")
 
 
 
@@ -64,7 +66,7 @@ article.single-projects(style="background-image: url(assets/img/projects/bg.jpg)
                   .single-projects__quotes
                     img(src="assets/img/reviews/square.svg", alt="#")
 
-                  .single-projects__subtitle Суворова Нтаалья
+                  .single-projects__subtitle Ограждение оборудования<br>на территории магазина IKEA
 
                   .single-projects__text
                     .single-projects__line
@@ -73,6 +75,19 @@ article.single-projects(style="background-image: url(assets/img/projects/bg.jpg)
                     p Общение с&nbsp;менеджерами и&nbsp;расчет будущих работ внушили нам оптимизм, и&nbsp;мы&nbsp;сделали заказ. В&nbsp;соответствии с&nbsp;договором, все работы были проведены в&nbsp;указанные сроки, мы&nbsp;получили такой забор, какой мы&nbsp;и&nbsp;хотели.
 
                     p Спасибо за&nbsp;сотрудничество!
+
+              .ex-portfolio-rev
+
+                .ex-portfolio-rev__title Отзыв клиента:
+
+                .ex-portfolio-rev__wrap
+
+                  a(href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="ex-portfolio-rev__video js-popup-video")
+                    img(src="assets/img/products/review.jpg", alt="#")
+
+                  a(href="#" class="ex-portfolio-rev__link")
+                    img(src="assets/img/products/letter.png", alt="#")
+                    span письмо<br>клиента
       
             
       .single-projects-arrow-tab.js-tab-arrow
@@ -83,4 +98,3 @@ article.single-projects(style="background-image: url(assets/img/projects/bg.jpg)
         .single-projects-arrow-tab__next.js-tab-next
           svg(xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36")
             path(d="M18 0c9.928 0 18 8.07 18 18 0 9.928-8.072 18-18 18S0 27.927 0 18C0 8.07 8.072 0 18 0zm0 32.437c7.352 0 13.453-5.533 14.324-12.657H16.067l4.017 4.055a1.783 1.783 0 1 1-1.25 3.032c-.455 0-.91-.19-1.25-.53l-7.087-7.087a1.784 1.784 0 0 1 0-2.501l7.086-7.087a1.784 1.784 0 0 1 2.501 0 1.785 1.785 0 0 1 0 2.502l-4.055 4.054h16.295C31.453 9.094 25.352 3.562 18 3.562c-7.958 0-14.438 6.48-14.438 14.437 0 7.958 6.48 14.438 14.438 14.438z")
-

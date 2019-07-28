@@ -1,0 +1,111 @@
+article.price.js-tab
+
+  section.price-sec-link
+
+    .container
+
+      .title Прайс
+
+      .tab
+
+        - var obj = ['Еврозабор', 'Профнастил', 'Сетка-рабица', 'Ограждения из профильной трубы', 'Заборы из евроштакетника']
+
+        .tab__links
+
+          each item, idx in obj
+
+            if idx == 0
+
+              .tab__col
+
+                .tab__link.js-tab-link.active(data-index=`${idx}`)!= item
+            else 
+              .tab__col
+
+                .tab__link.js-tab-link(data-index=`${idx}`)!= item
+
+  section.price-sec-content
+    .container
+      .tab__contents
+
+        - var items = 0
+
+        while items < 5
+
+          .tab__content.content-tab.js-tab-content(data-number=`${items++}`)
+
+            .title Сетчатое ограждение
+
+            .price-content__img-block
+              img(src="assets/img/price/img-1.jpg", alt="#")
+
+            .price-content__title-link Сетчатое ограждение <a href="#">"СУПЕР-ЭКОНОМ"</a>
+
+            .price-content__wrap
+
+              .price-content__col.price-content__col_3
+
+                .price-content__img-block
+
+                  .price-content__img
+                    img(src="assets/img/price/img-2.png", alt="#")
+                  
+                  .price-content__img-text На прямоугольном столбе, под бетонирование, с крепежом и заглушкой
+
+              .price-content__col
+
+                .price-content__main
+                
+                  .price-content__block
+
+                    .price-content__text
+                      p Абсолютная новинка на рынке сетчатых ограждений! Самый экономичный вариант из линейки прутковых ограждений! Идеальный вариант для ограждения частного дома и вашего участка. Панели, столбы, калитки и ворота покрываются порошково-полимерным составом (цвет - зеленый), что является залогом долголетия вашего ограждения.
+
+
+                    .price-content__character
+                      .price-content__subtitle
+                        svg(xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#71ad5f")
+                          path(d="M5.6 3.5h5.6v1.4H5.6zm0 2.8h5.6v1.4H5.6zm0 2.8h5.6v1.4H5.6zM2.8 3.5h1.4v1.4H2.8zm0 2.8h1.4v1.4H2.8zm0 2.8h1.4v1.4H2.8zm11.2-7v9.8c0 1.19-.91 2.1-2.1 2.1H2.1C.91 14 0 13.09 0 11.9V2.1C0 .91.91 0 2.1 0h9.8c1.19 0 2.1.91 2.1 2.1zm-1.4 0c0-.42-.28-.7-.7-.7H2.1c-.42 0-.7.28-.7.7v9.8c0 .42.28.7.7.7h9.8c.42 0 .7-.28.7-.7z")
+                        span Характеристики
+
+                      .price-content__spec
+
+                        .price-content-dots
+                          .price-content-dots__name Покрытие панелей:
+                          .price-content-dots__dot
+                          .price-content-dots__value цинк+порошок
+                        .price-content-dots
+                          .price-content-dots__name Диаметр прутка:
+                          .price-content-dots__dot
+                          .price-content-dots__value 3 мм
+                        .price-content-dots
+                          .price-content-dots__name Ширина панелей:
+                          .price-content-dots__dot
+                          .price-content-dots__value 2550 мм
+
+                .price-content__block-cost
+
+                  .price-content__desc
+                    span Стоимость панелей
+                    .price-content__desc-line
+
+                  .price-content__table-wrap
+
+                    .price-content__table
+                      
+                      .price-content__t-row
+                        .price-content__t-col Высота ограждения, м
+                        .price-content__t-col Цена панели (руб\шт)
+                        .price-content__t-col Погонный метр (руб\м)
+                      .price-content__t-row
+                        .price-content__t-col 1,5
+                        .price-content__t-col 1090
+                        .price-content__t-col 770
+                      .price-content__t-row
+                        .price-content__t-col 1,8
+                        .price-content__t-col 1210
+                        .price-content__t-col 860
+                      .price-content__t-row
+                        .price-content__t-col 2
+                        .price-content__t-col 1330
+                        .price-content__t-col 960

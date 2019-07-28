@@ -1,0 +1,33 @@
+article.portfolio
+
+  .container
+
+    .title.portfolio__title наши работы
+
+    .portfolio__items
+
+      - var items = ['Сетчатые ограждения', 'ОГРАЖДЕНИЯ ИЗ&nbsp;ПРОФНАСТИЛА', 'Ограждения из&nbsp;профильной трубы', 'Ограждения из евроштакетника', 'Оригинальные ограждения', 'Другие<br>ограждения']
+
+      each item, idx in items
+
+        if idx == 0
+
+          .portfolio-item
+
+            a(href="#").portfolio-item__link.active
+
+              img(src=`assets/img/products/i${idx+1}.png`, alt="#" class="portfolio-item__img")
+
+              span.portfolio-item__title!= item
+
+              span.portfolio-item__triangle
+        else
+          .portfolio-item
+
+            a(href="#").portfolio-item__link
+
+              img(src=`assets/img/products/i${idx+1}.png`, alt="#" class="portfolio-item__img")
+
+              span.portfolio-item__title!= item
+
+              span.portfolio-item__triangle

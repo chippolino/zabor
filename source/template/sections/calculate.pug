@@ -17,10 +17,10 @@ section.calculate
 
           img(src="assets/img/calculate/house.png", alt="Дом" class="calculate__house")
 
-          input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--top")
-          input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--left")
-          input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--right")
-          input(type="number" placeholder="0" class="calculate__input-text calculate__input-text--bottom")
+          input(type="text" placeholder="0" class="calculate__input-text calculate__input-text--top js-number")
+          input(type="text" placeholder="0" class="calculate__input-text calculate__input-text--left js-number")
+          input(type="text" placeholder="0" class="calculate__input-text calculate__input-text--right js-number")
+          input(type="text" placeholder="0" class="calculate__input-text calculate__input-text--bottom js-number")
 
         .calculate__btns
 
@@ -41,24 +41,24 @@ section.calculate
               img(src="assets/img/calculate/vid.svg", alt="")
               | Вид забора
 
-            select(name="" class="js-select calculate__select")
-              option(value="") Еврозабор
-              option(value="") Еврозабор2
-              option(value="") Еврозабор3
-              option(value="") Еврозабор4
-              option(value="") Еврозабор5
+            select(name="" class="js-select calculate__select js-view-zabor")
+              option(value="rab") Забор ищ сетки "Рабица"
+              option(value="prof") Забор из профнастила
 
           label.calculate__label
             span.calculate__label-span
               img(src="assets/img/calculate/height.svg", alt="")
               | Высота забора
 
-            select(name="" class="js-select calculate__select")
-              option(value="") Еврозабор
-              option(value="") Еврозабор2
-              option(value="") Еврозабор3
-              option(value="") Еврозабор4
-              option(value="") Еврозабор5
+            select(name="" class="js-select calculate__select" id="rab")
+              option(value="1.5") 1,5 м
+              option(value="1.8") 1,8 м
+              option(value="2") 2 м
+              option(value="2.5") 2,5 м
+
+            //- select(name="" class="js-select calculate__select" id="prof")
+            //-   option(value="1.5") 1,5 м
+            //-   option(value="1.8") 2 м
 
           label.calculate__label
             span.calculate__label-span
@@ -66,22 +66,22 @@ section.calculate
               | Количество ворот
 
             select(name="" class="js-select calculate__select")
-              option(value="") Еврозабор
-              option(value="") Еврозабор2
-              option(value="") Еврозабор3
-              option(value="") Еврозабор4
-              option(value="") Еврозабор5
+              option(value="0") 0
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3") 3
+              option(value="4") 4
           label.calculate__label
             span.calculate__label-span
               img(src="assets/img/calculate/sum.svg", alt="")
               | Количество калиток
 
             select(name="" class="js-select calculate__select")
-              option(value="") Еврозабор
-              option(value="") Еврозабор2
-              option(value="") Еврозабор3
-              option(value="") Еврозабор4
-              option(value="") Еврозабор5
+              option(value="0") 0
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3") 3
+              option(value="4") 4
 
           .calculate__cost
 
